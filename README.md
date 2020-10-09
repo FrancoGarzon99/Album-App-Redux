@@ -1,5 +1,5 @@
-To-do App realizada con React Hooks y Redux. <br/>
-En el siguiente link podrás ver el funcionamiento de la app ----> https://to-do-react-redux.vercel.app/
+Albums App realizada con React Hooks y Redux. <br/>
+En el siguiente link podrás ver el funcionamiento de la app ---->
 
 Instrucciones básicas para iniciar el proyecto(Fork & clone):
 

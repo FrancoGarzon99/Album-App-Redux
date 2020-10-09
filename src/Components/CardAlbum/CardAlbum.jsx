@@ -1,6 +1,6 @@
 import React from 'react';
 //Componente Card Album
-const CardAlbum = () => {
+const CardAlbum = ({ name, artist, image }) => {
 	//Render
 	return <div>CardAlbum</div>;
 };

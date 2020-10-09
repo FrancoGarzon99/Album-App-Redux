@@ -18,12 +18,7 @@ const RenderAlbums = (props) => {
 						<div key={i}>
 							<span
 								onClick={() =>
-									dispatch(
-										infoAlbumData(
-											state.inputValue,
-											album.name.replace('%20', '')
-										)
-									)
+									dispatch(infoAlbumData(state.inputValue, album.name))
 								}
 							>
 								{/* Linkiamos y pasamos los datos a la url */}

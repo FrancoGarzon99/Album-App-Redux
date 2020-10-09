@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { albumsApiData, ArtistaBuscado } from '../../Redux/Actions/Actions';
+import { Form, FormControl, Button } from 'react-bootstrap';
 
 //Componente Buscador
 const Buscador = ({ history }) => {
@@ -27,15 +28,18 @@ const Buscador = ({ history }) => {
 	//Render
 	return (
 		<>
-			<form onSubmit={dataEnviada}>
-				<input
+			<Form inline onSubmit={dataEnviada}>
+				<FormControl
 					type="text"
-					placeholder="Artista"
-					onChange={stateInput}
+					placeholder="Buscar Artista"
+					className="mr-sm-2"
 					value={inputValue}
+					onChange={stateInput}
 				/>
-				<button type="submit">Buscar</button>
-			</form>
+				<Button variant="info" type="submit">
+					Buscar
+				</Button>
+			</Form>
 		</>
 	);
 };

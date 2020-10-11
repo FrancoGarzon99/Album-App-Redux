@@ -1,8 +1,18 @@
 import React from 'react';
+import { Col, Image } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import './CardAlbum.css';
 //Componente Card Album
-const CardAlbum = ({ name, artist, image }) => {
+const CardAlbum = ({ img, titulo }) => {
 	//Render
-	return <div>CardAlbum</div>;
+	return (
+		<Col className="item">
+			<NavLink to={`/InfoAlbum/${titulo}`}>
+				<Image src={img} alt="Portada(Logo)" className="pic" />
+			</NavLink>
+			<p>{titulo}</p>
+		</Col>
+	);
 };
 
 export default CardAlbum;

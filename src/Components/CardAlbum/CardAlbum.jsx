@@ -10,7 +10,9 @@ const CardAlbum = ({ img, titulo }) => {
 			<NavLink to={`/InfoAlbum/${titulo}`}>
 				<Image src={img} alt="Portada(Logo)" className="pic" />
 			</NavLink>
-			<p>{titulo}</p>
+			<div>
+				<p className="titulo">{titulo}</p>
+			</div>
 		</Col>
 	);
 };

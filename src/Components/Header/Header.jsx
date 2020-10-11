@@ -16,10 +16,13 @@ const Header = (props) => {
 		<>
 			<Navbar variant="light" className="shadow p-2 mb-5 bg-light rounded">
 				<Container>
-					<Link to={'/'}>
-						<Image src={Logo} style={styleHeader.logoWidth} />
-					</Link>
-					<Nav className="mr-auto"></Nav>
+					<div>
+						<Nav className="mr-auto">
+							<Link to={'/'}>
+								<Image src={Logo} style={styleHeader.logoWidth} />
+							</Link>
+						</Nav>
+					</div>
 					<Buscador history={props.history} />
 				</Container>
 			</Navbar>

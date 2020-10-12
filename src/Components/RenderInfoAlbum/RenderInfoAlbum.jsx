@@ -1,5 +1,8 @@
 import React from 'react';
+import { Row, Container, Col } from 'react-bootstrap';
+import './RenderInfoAlbum.css';
 import { useSelector } from 'react-redux';
+import { CardInfoAlbums, Ulist } from '../CardsAlbums/Cards';
 
 //Componente Render Info Album
 const RenderInfoAlbum = () => {
@@ -8,30 +11,39 @@ const RenderInfoAlbum = () => {
 	//Render
 	return (
 		<>
-			{/* Mapeamos los datos del store y generamos una condicional con el operador ternario*/}
-			{!!Object.keys(state).length ? (
-				<div>
-					<img src={state.album.image[3]['#text']} alt="Logo" />
-					<p>{state.album.artist}</p>
-					<p>{state.album.name}</p>
-					<div>
-						{state.album.tracks.track.map((c, i) => {
-							return (
-								<ul key={i}>
-									<li>{c.name}</li>
-									<li>{c.duration}</li>
-									<li>{c.url}</li>
-								</ul>
-							);
-						})}
-					</div>
-				</div>
-			) : (
-				<div>
-					<h5>Cargando...</h5>
-				</div>
-			)}
-			<div></div>
+			<Container>
+				<Row className="render-info-albums-row">
+					{/* Mapeamos los datos del store y generamos una condicional con el operador ternario*/}
+					{!!Object.keys(state).length ? (
+						<Col className="d-flex">
+							<div className="img-info">
+								<CardInfoAlbums
+									img={state.album.image[3]['#text']}
+									nameArtist={state.album.artist}
+									nameAlbum={state.album.name}
+								/>
+							</div>
+							<div className="render-info-album-tracks">
+								{state.album.tracks.track &&
+									state.album.tracks.track.map((c, i) => {
+										return (
+											<Ulist
+												key={i}
+												nameTrack={c.name}
+												duration={c.duration}
+												url={c.url}
+											/>
+										);
+									})}
+							</div>
+						</Col>
+					) : (
+						<div>
+							<h5>Cargando...</h5>
+						</div>
+					)}
+				</Row>
+			</Container>
 		</>
 	);
 };

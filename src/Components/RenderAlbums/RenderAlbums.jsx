@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { infoAlbumData } from '../../Redux/Actions/Actions';
-import CardAlbum from '../CardAlbum/CardAlbum';
+import { CardAlbum } from '../CardsAlbums/Cards';
 
 //Componente Render Albums
 const RenderAlbums = (props) => {

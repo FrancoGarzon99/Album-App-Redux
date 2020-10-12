@@ -1,3 +1,4 @@
+/* --------Componente Card Album----------- */
 .item {
 	/* border-radius: 10%; */
 	padding: 15px 15px;
@@ -11,6 +12,7 @@
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
 }
 .titulo {
+	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 	color: rgb(255, 255, 255);
 	text-shadow: -2px 2px 4px #000000;
@@ -25,4 +27,22 @@
 
 .item:hover {
 	transform: translateY(-10px);
+}
+
+/*-------- Componente Card Info Album -------- */
+.header-card-info {
+}
+.body-card-info {
+	font-family: 'Raleway', sans-serif;
+}
+.portada-card {
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+/*-------- Componente Lista --------*/
+.body-ul-list {
+	font-family: 'Raleway', sans-serif;
+}
+.name-container {
+	width: 250px;
 }

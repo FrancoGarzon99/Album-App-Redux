@@ -1,5 +1,5 @@
 Albums App realizada con React Hooks y Redux. <br/>
-En el siguiente link podrás ver el funcionamiento de la app ---->
+En el siguiente link podrás ver el funcionamiento de la app ----> https://album-app-blond.vercel.app/
 
 Instrucciones básicas para iniciar el proyecto(Fork & clone):
 

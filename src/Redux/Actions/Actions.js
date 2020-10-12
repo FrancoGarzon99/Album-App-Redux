@@ -17,7 +17,7 @@ export const ArtistaBuscado = (payload) => {
 export const albumsApiData = (inputValue) => {
 	return async (dispatch) => {
 		const urlData = await fetch(
-			`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${inputValue}&api_key=25d7a95b848926418d0dd718c5c7aaac&format=json`
+			`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${inputValue}&api_key=25d7a95b848926418d0dd718c5c7aaac&format=json`
 		);
 		const dataJson = await urlData.json();
 		dispatch(albumsEncontrados(dataJson.results.albummatches.album));
@@ -26,7 +26,7 @@ export const albumsApiData = (inputValue) => {
 export const infoAlbumData = (inputValue, AlbumTitulo) => {
 	return async (dispatch) => {
 		const urlData = await fetch(
-			`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=25d7a95b848926418d0dd718c5c7aaac&artist=${inputValue}&album=${AlbumTitulo}&format=json`
+			`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=25d7a95b848926418d0dd718c5c7aaac&artist=${inputValue}&album=${AlbumTitulo}&format=json`
 		);
 		const dataJson = await urlData.json();
 		dispatch(infoAlbum(dataJson));

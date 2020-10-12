@@ -1,16 +1,16 @@
 import React from 'react';
 import { Container, Image, Row } from 'react-bootstrap';
 import Buscador from '../Buscador/Buscador';
-import Logo from './album.svg';
+import Logo from './Album-app.png';
 
 //Style de lcomponente
 const styleHome = {
 	homeComponent: {
 		width: '100%',
-		height: '70vh',
+		height: '80vh',
 	},
 	LogoWidth: {
-		width: '200px',
+		width: '300px',
 	},
 };
 //Componente Home
@@ -24,7 +24,6 @@ const Home = (props) => {
 					style={styleHome.homeComponent}
 				>
 					<Image src={Logo} style={styleHome.LogoWidth} className="mb-4" />
-					<h5 className="mb-3">ALBUMS APP</h5>
 					<Buscador history={props.history} />
 				</Row>
 			</Container>

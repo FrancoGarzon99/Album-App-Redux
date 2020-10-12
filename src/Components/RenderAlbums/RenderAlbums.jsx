@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { infoAlbumData } from '../../Redux/Actions/Actions';
 import { CardAlbum } from '../CardsAlbums/Cards';
+import Loading from '../Loading/Loading';
 
 //Componente Render Albums
 const RenderAlbums = (props) => {
@@ -40,7 +41,7 @@ const RenderAlbums = (props) => {
 							}
 						})
 					) : (
-						<h5>Cargando...</h5>
+						<Loading />
 					)}
 				</Row>
 			</Container>

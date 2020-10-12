@@ -3,6 +3,7 @@ import { Row, Container, Col } from 'react-bootstrap';
 import './RenderInfoAlbum.css';
 import { useSelector } from 'react-redux';
 import { CardInfoAlbums, Ulist } from '../CardsAlbums/Cards';
+import Loading from '../Loading/Loading';
 
 //Componente Render Info Album
 const RenderInfoAlbum = () => {
@@ -38,9 +39,11 @@ const RenderInfoAlbum = () => {
 							</div>
 						</Col>
 					) : (
-						<div>
-							<h5>Cargando...</h5>
-						</div>
+						<Col>
+							<div className="d-flex justify-content-center">
+								<Loading />
+							</div>
+						</Col>
 					)}
 				</Row>
 			</Container>

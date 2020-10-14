@@ -12,7 +12,7 @@ const Loading = () => {
 	//Render
 	return (
 		<div>
-			<Image src={Gif} alt="Cargando..." style={LoadStyle.loadWidth} />
+			<Image src={Gif} alt="Cargando." style={LoadStyle.loadWidth} />
 		</div>
 	);
 };
